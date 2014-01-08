@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,700,900,500,600,800,100,200,300' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,500,600,800,100,200,300' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css' />
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
+	<style>
+        #wrapper {
+            overflow: hidden;
+            width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #top {
+            overflow: hidden;
+            position: relative;
+        }
+		#top-left {
+            float: left;
+            width: 60%;
+            padding-top: 10px;
+		}
+		#top-left > .title {
+			font-family: Raleway, sans-serif;
+			font-weight: 500;
+			font-size: 90px;
+            color: #222;
+            line-height: 90%;
+            margin-bottom: 5px;
+            letter-spacing: -5px;
+		}
+		#top-left > .subtitle {
+			font-family: Raleway, sans-serif;
+			font-weight: 600;
+			font-size: 50px;
+            color: #888;
+            line-height: 95%;
+            letter-spacing: -3px;
+		}
+        #top-right {
+            float: left;
+            width: 40%;
+            padding-top: 195px;
+        }
+        #top-right > .contents {
+            font-family: Lato, sans-serif;
+            font-weight: 300;
+            padding-left: 50px;
+        }
+        #top-right > .contents > .contact-item {
+            margin-top: 5px;
+            overflow: hidden;
+        }
+        #top-right > .contents > .contact-item > .icon {
+            float: left;
+            line-height: 25px;
+            padding: 0 10px;
+            width: 40px;
+            text-align: center;
+        }
+        #top-right > .contents > .contact-item > .text {
+            float: left;
+            line-height: 25px;
+            font-size: 20px;
+        }
+        #picture {
+            position: absolute;
+            transform: rotate(-15deg);
+            -ms-transform: rotate(-15deg); /* IE 9 */
+            -webkit-transform: rotate(-15deg); /* Safari and Chrome */
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+            border: 7px solid white;
+            left: 400px;
+            top: 30px;
+            height: 200px;
+            width: 200px;
+        }
+        #picture > img {
+            width: 200px;
+            height: 200px;
+        }
+        #picture-arrow {
+            position: absolute;
+            left: 610px;
+            top: 20px;
+        }
+        #picture-arrow > img {
+            width: 80px;
+            height: 80px;
+        }
+        #picture-quote {
+            font-family: "Indie Flower", sans-serif;
+            position: absolute;
+            left: 705px;
+            top: 10px;
+            width: 280px;
+            font-size: 18px;
+            transform: rotate(5deg);
+            -ms-transform: rotate(5deg); /* IE 9 */
+            -webkit-transform: rotate(5deg); /* Safari and Chrome */
+            color: #444;
+        }
+        #left-wrapper {
+            float: left;
+            width: 60%;
+        }
+        #left {
+            padding-right: 10px;
+        }
+        #right-wrapper {
+            float: left;
+            width: 40%;
+        }
+        #right {
+            padding-left: 10px;
+        }
+        #career {
+            margin: 40px 0 0 0;
+        }
+        #career > .title {
+            border-bottom: 1px solid #333;
+            padding: 0 0 5px 0;
+            margin-bottom: 20px;
+            font-family: Raleway, sans-serif;
+            font-weight: normal;
+            font-size: 30px;
+        }
+        #career > .contents > .career-item {
+            overflow: hidden;
+            margin-bottom: 20px;
+            position: relative;
+            page-break-inside: avoid;
+        }
+        #career > .contents > .career-item > .left {
+            float: left;
+            width: 30%;
+        }
+        #career > .contents > .career-item > .left > .period {
+            font-family: Lato, sans-serif;
+            font-weight: 300;
+            font-size: 20px;
+            text-align: center;
+        }
+        #career > .contents > .career-item > .left > .line {
+            border-left: 1px solid #ddd;
+            position: absolute;
+            top: 25px;
+            bottom: 0;
+            margin: 20px 0 0 90px;
+        }
+        #career > .contents > .career-item > .right {
+            float: left;
+            width: 70%;
+        }
+        #career > .contents > .career-item > .right > .company {
+            font-family: Lato, sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            color: #666;
+        }
+        #career > .contents > .career-item > .right > .location {
+            font-family: Lato, sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            color: #666;
+        }
+        #career > .contents > .career-item > .right > .role {
+            margin: 10px 0 0 0;
+            font-family: Lato, sans-serif;
+            font-size: 24px;
+            font-weight: 300;
+        }
+        #career > .contents > .career-item > .right > .description {
+            font-family: Lato, sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+        }
+        #career > .contents > .career-item > .right > .tags {
+            margin-top: 10px;
+            overflow: hidden;
+        }
+        #career > .contents > .career-item > .right > .tags > .tag {
+            float: left;
+            border-radius: 3px;
+            background-color: #ccc;
+            color: #fff;
+            font-family: Lato, sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            padding: 3px 6px;
+            margin-right: 3px;
+            margin-bottom: 3px;
+        }
+        #projects {
+            margin: 40px 0 0 0;
+        }
+        #projects > .title {
+            border-bottom: 1px solid #333;
+            padding: 0 0 5px 0;
+            margin-bottom: 20px;
+            font-family: Raleway, sans-serif;
+            font-weight: normal;
+            font-size: 30px;
+        }
+        #projects > .contents > .projects-item {
+            overflow: hidden;
+            margin-bottom: 20px;
+            position: relative;
+            page-break-inside: avoid;
+        }
+        #projects > .contents > .projects-item > .left {
+            float: left;
+            width: 30%;
+        }
+        #projects > .contents > .projects-item > .left > .period {
+            font-family: Lato, sans-serif;
+            font-weight: 300;
+            font-size: 20px;
+            text-align: center;
+        }
+        #projects > .contents > .projects-item > .left > .line {
+            border-left: 1px solid #ddd;
+            position: absolute;
+            top: 25px;
+            bottom: 0;
+            margin: 20px 0 0 90px;
+        }
+        #projects > .contents > .projects-item > .right {
+            float: left;
+            width: 70%;
+        }
+        #projects > .contents > .projects-item > .right > .project {
+            margin: 0 0 10px 0;
+            font-family: Lato, sans-serif;
+            font-size: 24px;
+            font-weight: 300;
+        }
+        #projects > .contents > .projects-item > .right > .description {
+            font-family: Lato, sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+        }
+        #projects > .contents > .projects-item > .right > .tags {
+            margin-top: 10px;
+            overflow: hidden;
+        }
+        #projects > .contents > .projects-item > .right > .tags > .tag {
+            float: left;
+            border-radius: 3px;
+            background-color: #ccc;
+            color: #fff;
+            font-family: Lato, sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            padding: 3px 6px;
+            margin-right: 3px;
+            margin-bottom: 3px;
+        }
+        #skills {
+            margin: 40px 0 0 0;
+        }
+        #skills > .title {
+            border-bottom: 1px solid #333;
+            padding: 0 0 5px 0;
+            margin-bottom: 20px;
+            font-family: Raleway, sans-serif;
+            font-weight: normal;
+            font-size: 30px;
+        }
+        #skills > .contents > .skills-item {
+            overflow: hidden;
+            margin: 0 20px 20px 0;
+            page-break-inside: avoid;
+        }
+        #skills > .contents > .skills-item > .left {
+            float: left;
+            width: 40%;
+            font-family: Lato, sans-serif;
+            font-weight: 300;
+            font-size: 20px;
+            text-align: center;
+        }
+        #skills > .contents > .skills-item > .right {
+            float: left;
+            width: 60%;
+            padding: 2px 0;
+        }
+        #skills > .contents > .skills-item > .right > .progress-bar {
+            background-color: #e6e6e6;
+            height: 20px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        #skills > .contents > .skills-item > .right > .progress-bar > .p50 {
+            background-color: #5cb85c;
+            height: 20px;
+            width: 50%;
+        }
+        #skills > .contents > .skills-item > .right > .progress-bar > .p60 {
+            background-color: #5cb85c;
+            height: 20px;
+            width: 60%;
+        }
+        #skills > .contents > .skills-item > .right > .progress-bar > .p70 {
+            background-color: #5cb85c;
+            height: 20px;
+            width: 70%;
+        }
+        #skills > .contents > .skills-item > .right > .progress-bar > .p80 {
+            background-color: #5cb85c;
+            height: 20px;
+            width: 80%;
+        }
+        #skills > .contents > .skills-item > .right > .progress-bar > .p90 {
+            background-color: #5cb85c;
+            width: 90%;
+            height: 20px;
+        }
+        #skills > .contents > .skills-item > .right > .progress-bar > .p100 {
+            background-color: #5cb85c;
+            height: 20px;
+            width: 100%;
+        }
+        #education {
+            margin: 40px 0 0 0;
+        }
+        #education > .title {
+            border-bottom: 1px solid #333;
+            padding: 0 0 5px 0;
+            margin-bottom: 20px;
+            font-family: Raleway, sans-serif;
+            font-weight: normal;
+            font-size: 30px;
+        }
+        #education > .contents > .education-item {
+            overflow: hidden;
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+        #education > .contents > .education-item > .left {
+            float: left;
+            width: 40%;
+        }
+        #education > .contents > .education-item > .left > .period {
+            font-family: Lato, sans-serif;
+            font-weight: 300;
+            font-size: 20px;
+            text-align: center;
+        }
+        #education > .contents > .education-item > .left > .line {
+            border-left: 1px solid #ddd;
+            height: 70px;
+            margin: 20px 0 0 90px;
+        }
+        #education > .contents > .education-item > .right {
+            float: left;
+            width: 60%;
+        }
+        #education > .contents > .education-item > .right > .university {
+            font-family: Lato, sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            color: #666;
+        }
+        #education > .contents > .education-item > .right > .location {
+            font-family: Lato, sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            color: #666;
+        }
+        #education > .contents > .education-item > .right > .degree {
+            margin: 10px 0 0 0;
+            font-family: Lato, sans-serif;
+            font-size: 24px;
+            font-weight: 300;
+        }
+        #about-me {
+            margin: 40px 0 0 0;
+            page-break-inside: avoid;
+        }
+        #about-me > .title {
+            border-bottom: 1px solid #333;
+            padding: 0 0 5px 0;
+            margin-bottom: 20px;
+            font-family: Raleway, sans-serif;
+            font-weight: normal;
+            font-size: 30px;
+        }
+        #about-me > .contents > .about-me-item {
+            page-break-inside: avoid;
+        }
+        #about-me > .contents > .about-me-item > .header {
+            margin-bottom: 10px;
+            font-family: Lato, sans-serif;
+            font-size: 24px;
+            font-weight: 300;
+        }
+        #about-me > .contents .about-me-item > .description {
+            margin-bottom: 20px;
+            font-family: Lato, sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="top">
+            <div id="top-left">
+                <div class="title">GERMÁN LATORRE</div>
+                <div class="subtitle">FULL STACK<br />WEB DEVELOPER</div>
+            </div>
+            <div id="top-right">
+                <div class="contents">
+                    <div class="contact-item">
+                        <div class="icon"><i class="fa fa-phone" style="font-size: 36px"></i></div>
+                        <div class="text">+34 686 865 835</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon"><i class="fa fa-envelope" style="font-size: 30px"></i></div>
+                        <div class="text">german.latorre@gmail.com</div>
+                    </div>
+                </div>
+            </div>
+            <div id="picture"><img src="me.png" /></div>
+            <div id="picture-arrow"><img src="arrow.png" /></div>
+            <div id="picture-quote">
+                Not a bad picture, is it? Well, that was before I
+                had two kids and started simultaneous projects, both personal
+                and corporate.  Must admit I look sleepless and older now...  Same
+                funny face, though! ;-)</div>
+        </div>
+        <div id="left-wrapper">
+            <div id="left">
+                <div id="career">
+                    <div class="title">CAREER</div>
+                    <div class="contents">
+                        <div class="career-item">
+                            <div class="left">
+                                <div class="period">2009 - today</div>
+                                <div class="line"></div>
+                            </div>
+                            <div class="right">
+                                <div class="company">Twindocs</div>
+                                <div class="location">Zaragoza, SPAIN</div>
+                                <div class="role">Tech Lead</div>
+                                <div class="description">
+                                    Develop and maintain the whole Twindocs on-line service and apps.
+                                    Look after the development process, global architecture and critical
+                                    tech-related decissions. Leading a team of 5 people.
+                                </div>
+                                <div class="tags">
+                                    <div class="tag">JavaScript</div>
+                                    <div class="tag">jQuery</div>
+                                    <div class="tag">Backbone.js</div>
+                                    <div class="tag">HTML</div>
+                                    <div class="tag">HTML5</div>
+                                    <div class="tag">CSS</div>
+                                    <div class="tag">JSON</div>
+                                    <div class="tag">C#</div>
+                                    <div class="tag">ASP.NET</div>
+                                    <div class="tag">SOAP WS</div>
+                                    <div class="tag">NAnt</div>
+                                    <div class="tag">NUnit</div>
+                                    <div class="tag">Unit testing</div>
+                                    <div class="tag">SQL Server</div>
+                                    <div class="tag">Sphinx</div>
+                                    <div class="tag">Rackspace Cloud</div>
+                                    <div class="tag">Amazon AWS</div>
+                                    <div class="tag">Project Management</div>
+                                    <div class="tag">Redmine</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="career-item">
+                            <div class="left">
+                                <div class="period">2012 - today</div>
+                                <div class="line"></div>
+                            </div>
+                            <div class="right">
+                                <div class="company">Wonnova</div>
+                                <div class="location">Madrid and Zaragoza, SPAIN</div>
+                                <div class="role">Backend Web Developer (Part-time)</div>
+                                <div class="description">
+                                    Design and develop a gamification system that consists of a server that
+                                    integrates with existing websites and applications via JSONP
+                                    and REST APIs.  Started from a simple design and prototype, constantly
+                                    evolving and growing the agile way.
+                                </div>
+                                <div class="tags">
+                                    <div class="tag">JavaScript</div>
+                                    <div class="tag">PHP</div>
+                                    <div class="tag">AJAX</div>
+                                    <div class="tag">REST</div>
+                                    <div class="tag">JSONP</div>
+                                    <div class="tag">Slim Framework</div>
+                                    <div class="tag">RedbeanPHP</div>
+                                    <div class="tag">phpUnit</div>
+                                    <div class="tag">Unit testing</div>
+                                    <div class="tag">MySQL</div>
+                                    <div class="tag">Amazon EC2</div>
+                                    <div class="tag">Agile</div>
+                                    <div class="tag">SCRUM</div>
+                                    <div class="tag">JIRA</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="career-item">
+                            <div class="left">
+                                <div class="period">2009</div>
+                                <div class="line"></div>
+                            </div>
+                            <div class="right">
+                                <div class="company">Gala Networks Europe</div>
+                                <div class="location">Dublin, IRELAND</div>
+                                <div class="role">Senior Software Developer</div>
+                                <div class="description">
+                                    Develop private and public web applications based on storyboards
+                                    and user stories, for an important online game publishing company.
+                                </div>
+                                <div class="tags">
+                                    <div class="tag">JavaScript</div>
+                                    <div class="tag">jQuery</div>
+                                    <div class="tag">HTML</div>
+                                    <div class="tag">CSS</div>
+                                    <div class="tag">C#</div>
+                                    <div class="tag">ASP.NET</div>
+                                    <div class="tag">SQL Server</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="career-item">
+                            <div class="left">
+                                <div class="period">2008</div>
+                                <div class="line"></div>
+                            </div>
+                            <div class="right">
+                                <div class="company">Clubtravel Ltd.</div>
+                                <div class="location">Dublin, IRELAND</div>
+                                <div class="role">Software Developer</div>
+                                <div class="description">
+                                    Develop private and public web applications (front-end and backoffice)
+                                    for the travel industry in one of the most important carriers in Ireland.
+                                </div>
+                                <div class="tags">
+                                    <div class="tag">JavaScript</div>
+                                    <div class="tag">jQuery</div>
+                                    <div class="tag">HTML</div>
+                                    <div class="tag">CSS</div>
+                                    <div class="tag">C#</div>
+                                    <div class="tag">ASP.NET</div>
+                                    <div class="tag">Classic ASP</div>
+                                    <div class="tag">SQL Server</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="career-item">
+                            <div class="left">
+                                <div class="period">2007 - 2008</div>
+                                <div class="line"></div>
+                            </div>
+                            <div class="right">
+                                <div class="company">SEAS, Estudios Superiores Abiertos</div>
+                                <div class="location">Zaragoza, SPAIN</div>
+                                <div class="role">Computer Science Tutor (Part-time)</div>
+                                <div class="description">
+                                    Assisted students of online Web programming, PHP, MySQL and C courses.  I killed
+                                    myself to compensate the not very complete course materials provided by the school,
+                                    as I wanted students to be happy with what they did.  Solved their problems
+                                    and doubts and provided advice for the direction of their efforts and further
+                                    learning.
+                                </div>
+                                <div class="tags">
+                                    <div class="tag">JavaScript</div>
+                                    <div class="tag">HTML</div>
+                                    <div class="tag">CSS</div>
+                                    <div class="tag">PHP</div>
+                                    <div class="tag">Apache</div>
+                                    <div class="tag">MySQL</div>
+                                    <div class="tag">C</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="career-item">
+                            <div class="left">
+                                <div class="period">2005 - 2008</div>
+                                <div class="line"></div>
+                            </div>
+                            <div class="right">
+                                <div class="company">Grupo Tragsa</div>
+                                <div class="location">Madrid and Zaragoza, SPAIN</div>
+                                <div class="role">Senior Software Developer</div>
+                                <div class="description">
+                                    Develop web applications, services and desktop applications for animal data
+                                    registration and movement tracing, used by the local authorities for health
+                                    and welfare related purposes.
+                                </div>
+                                <div class="tags">
+                                    <div class="tag">JavaScript</div>
+                                    <div class="tag">HTML</div>
+                                    <div class="tag">CSS</div>
+                                    <div class="tag">C#</div>
+                                    <div class="tag">ASP.NET</div>
+                                    <div class="tag">SOAP WS</div>
+                                    <div class="tag">SQL Server</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="career-item">
+                            <div class="left">
+                                <div class="period">2003 - 2005</div>
+                            </div>
+                            <div class="right">
+                                <div class="company">Wonderlabs</div>
+                                <div class="location">Huesca, SPAIN</div>
+                                <div class="role">Software Developer</div>
+                                <div class="description">
+                                    Develop mobile PDA applications, SMS Gateway services and mobile services-related
+                                    web applications. Leading a team of 4 people.
+                                </div>
+                                <div class="tags">
+                                    <div class="tag">HTML</div>
+                                    <div class="tag">CSS</div>
+                                    <div class="tag">C#</div>
+                                    <div class="tag">.NET Mobile</div>
+                                    <div class="tag">ASP.NET</div>
+                                    <div class="tag">SOAP WS</div>
+                                    <div class="tag">SQL Server</div>
+                                    <div class="tag">Java</div>
+                                    <div class="tag">Ant</div>
+                                    <div class="tag">Classic ASP</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="projects">
+                    <div class="title">OTHER PROJECTS</div>
+                    <div class="contents">
+                        <div class="projects-item">
+                            <div class="left">
+                                <div class="period">2013 - today</div>
+                                <div class="line"></div>
+                            </div>
+                            <div class="right">
+                                <div class="project">CandyVault</div>
+                                <div class="description">
+                                    An online, multi-device password storage
+                                    system in which main target is excelling in usability and UX,
+                                    closely followed by providing the best user data privacy by using
+                                    client-side encryption.  Project started by autumn 2013, currently
+                                    in design + development phase.  Based on a "Pure JavaScript"
+                                    Web Stack.
+                                </div>
+                                <div class="tags">
+                                    <div class="tag">JavaScript</div>
+                                    <div class="tag">jQuery</div>
+                                    <div class="tag">Backbone.js</div>
+                                    <div class="tag">HTML</div>
+                                    <div class="tag">CSS</div>
+                                    <div class="tag">REST</div>
+                                    <div class="tag">Node.js</div>
+                                    <div class="tag">MongoDB</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projects-item">
+                            <div class="left">
+                                <div class="period">2013 - today</div>
+                            </div>
+                            <div class="right">
+                                <div class="project">Rock21 Radio Player</div>
+                                <div class="description">
+                                    Radio player for mobile devices (iOS + Android, mainly)
+                                    based on HTML5 + PhoneGap.  Initially targets a Radionomy station
+                                    from a friend.  The aim is simplicity and UX once again, allowing
+                                    users to see tracks, artists and covers being played, as well as
+                                    the list of already played songs.
+                                </div>
+                                <div class="tags">
+                                    <div class="tag">JavaScript</div>
+                                    <div class="tag">jQuery</div>
+                                    <div class="tag">HTML5</div>
+                                    <div class="tag">CSS</div>
+                                    <div class="tag">PhoneGap</div>
+                                    <div class="tag">Objective-C</div>
+                                    <div class="tag">Java</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="right-wrapper">
+            <div id="right">
+                <div id="skills">
+                    <div class="title">SKILLS</div>
+                    <div class="contents">
+                        <div class="skills-item">
+                            <div class="left">
+                                JavaScript
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p90"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <div class="left">
+                                jQuery
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p90"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <div class="left">
+                                Backbone.js
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p80"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <div class="left">
+                                Node.js
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p70"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <div class="left">
+                                .NET, C#
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <div class="left">
+                                OOP
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p90"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <div class="left">
+                                PHP
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p80"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <div class="left">
+                                REST
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p80"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <div class="left">
+                                HTML
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p90"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <div class="left">
+                                CSS
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p90"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <div class="left">
+                                SQL
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p90"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="education">
+                    <div class="title">EDUCATION</div>
+                    <div class="contents">
+                        <div class="education-item">
+                            <div class="left">
+                                <div class="period">1998 - 2003</div>
+                                <div class="line"></div>
+                            </div>
+                            <div class="right">
+                                <div class="university">University of Zaragoza</div>
+                                <div class="location">Zaragoza, SPAIN</div>
+                                <div class="degree">M. Sc. in Computer Science</div>
+                            </div>
+                        </div>
+                        <div class="education-item">
+                            <div class="left">
+                                <div class="period">2002 - 2003</div>
+                            </div>
+                            <div class="right">
+                                <div class="university">University of Lund</div>
+                                <div class="location">Lund, SWEDEN</div>
+                                <div class="degree">Master Thesis</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="about-me">
+                    <div class="title">ABOUT ME</div>
+                    <div class="contents">
+                        <div class="about-me-item">
+                            <div class="header">
+                                I see myself as...
+                            </div>
+                            <div class="description">
+                                Gentle, honest, hard worker, commited, easy-going, team player,
+                                clean code fanatic, a dreamer, a realistic, loyal, and someone to get on well with.
+                            </div>
+                        </div>
+                        <div class="about-me-item">
+                            <div class="header">
+                                I love...
+                            </div>
+                            <div class="description">
+                                Listening to and playing music, reading, coding, watching movies,
+                                traveling, hiking, playing with my sons (2 and 0 years old), trains, hanging
+                                around with friends, learning anything, did I mention writing beautiful
+                                clean code? I wish my days had 48 hours!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
