@@ -173,6 +173,7 @@
             font-weight: 300;
         }
         #career > .contents > .career-item > .right > .description {
+            margin: 10px 0 0 0;
             font-family: Lato, sans-serif;
             font-size: 16px;
             font-weight: 300;
@@ -180,6 +181,7 @@
         #career > .contents > .career-item > .right > .tags {
             margin-top: 10px;
             overflow: hidden;
+            display: none;
         }
         #career > .contents > .career-item > .right > .tags > .tag {
             float: left;
@@ -245,6 +247,7 @@
         #projects > .contents > .projects-item > .right > .tags {
             margin-top: 10px;
             overflow: hidden;
+            display: none;
         }
         #projects > .contents > .projects-item > .right > .tags > .tag {
             float: left;
@@ -268,6 +271,10 @@
             font-family: Raleway, sans-serif;
             font-weight: normal;
             font-size: 30px;
+        }
+        #skills > .contents > .skills-separator {
+            border-top: 1px solid #bbb;
+            margin-bottom: 20px;
         }
         #skills > .contents > .skills-item {
             overflow: hidden;
@@ -324,6 +331,7 @@
             width: 100%;
         }
         #education {
+            page-break-inside: avoid;
             margin: 40px 0 0 0;
         }
         #education > .title {
@@ -449,7 +457,11 @@
                                 <div class="description">
                                     Develop and maintain the whole Twindocs on-line service and apps.
                                     Look after the development process, global architecture and critical
-                                    tech-related decissions. Leading a team of 5 people.
+                                    tech-related decissions.
+                                </div>
+                                <div class="description">
+                                    Leading a team of 5 people in an environment requiring
+                                    immediate reaction to changes in our customers' needs.
                                 </div>
                                 <div class="tags">
                                     <div class="tag">JavaScript</div>
@@ -484,10 +496,13 @@
                                 <div class="location">Madrid and Zaragoza, SPAIN</div>
                                 <div class="role">Backend Web Developer (Part-time)</div>
                                 <div class="description">
-                                    Design and develop a gamification system that consists of a server that
+                                    Design and develop a gamification server that
                                     integrates with existing websites and applications via JSONP
-                                    and REST APIs.  Started from a simple design and prototype, constantly
-                                    evolving and growing the agile way.
+                                    and REST APIs.
+                                </div>
+                                <div class="description">
+                                    Genuine startup spirit.  Started from a simple design and prototype, constantly
+                                    evolving and growing "The Agile Way".
                                 </div>
                                 <div class="tags">
                                     <div class="tag">JavaScript</div>
@@ -518,7 +533,11 @@
                                 <div class="role">Senior Software Developer</div>
                                 <div class="description">
                                     Develop private and public web applications based on storyboards
-                                    and user stories, for an important online game publishing company.
+                                    and user stories, within an online game publishing company.
+                                </div>
+                                <div class="description">
+                                    Absolutely friendly place to work, great people and even better
+                                    company culture.
                                 </div>
                                 <div class="tags">
                                     <div class="tag">JavaScript</div>
@@ -541,8 +560,12 @@
                                 <div class="location">Dublin, IRELAND</div>
                                 <div class="role">Software Developer</div>
                                 <div class="description">
-                                    Develop private and public web applications (front-end and backoffice)
-                                    for the travel industry in one of the most important carriers in Ireland.
+                                    Develop private and public web applications (front-end and back-office)
+                                    for the travel industry.
+                                </div>
+                                <div class="description">
+                                    Dealt with legacy code and chaotic databases, and helped in shifting to a more structured
+                                    and better quality bunch of apps, with smoother UI designs.
                                 </div>
                                 <div class="tags">
                                     <div class="tag">JavaScript</div>
@@ -566,11 +589,12 @@
                                 <div class="location">Zaragoza, SPAIN</div>
                                 <div class="role">Computer Science Tutor (Part-time)</div>
                                 <div class="description">
-                                    Assisted students of online Web programming, PHP, MySQL and C courses.  I killed
-                                    myself to compensate the not very complete course materials provided by the school,
-                                    as I wanted students to be happy with what they did.  Solved their problems
-                                    and doubts and provided advice for the direction of their efforts and further
-                                    learning.
+                                    Assisted students of online Web programming, PHP, MySQL and C courses.
+                                </div>
+                                <div class="description">
+                                    Killed
+                                    myself to compensate the not very accurate course materials provided by the school,
+                                    with the aim of making my students be happy with what they were doing.
                                 </div>
                                 <div class="tags">
                                     <div class="tag">JavaScript</div>
@@ -597,6 +621,10 @@
                                     registration and movement tracing, used by the local authorities for health
                                     and welfare related purposes.
                                 </div>
+                                <div class="description">
+                                    Worked in a team of 5 people.  Probably the best
+                                    relationship with colleagues and managers that I've ever had in a company.
+                                </div>
                                 <div class="tags">
                                     <div class="tag">JavaScript</div>
                                     <div class="tag">HTML</div>
@@ -619,6 +647,10 @@
                                 <div class="description">
                                     Develop mobile PDA applications, SMS Gateway services and mobile services-related
                                     web applications. Leading a team of 4 people.
+                                </div>
+                                <div class="description">
+                                    My first "real" job, intense and stressful, in which I forged myself as
+                                    a true software developer.
                                 </div>
                                 <div class="tags">
                                     <div class="tag">HTML</div>
@@ -721,66 +753,6 @@
                         </div>
                         <div class="skills-item">
                             <div class="left">
-                                Backbone.js
-                            </div>
-                            <div class="right">
-                                <div class="progress-bar">
-                                    <div class="p80"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skills-item">
-                            <div class="left">
-                                Node.js
-                            </div>
-                            <div class="right">
-                                <div class="progress-bar">
-                                    <div class="p70"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skills-item">
-                            <div class="left">
-                                .NET, C#
-                            </div>
-                            <div class="right">
-                                <div class="progress-bar">
-                                    <div class="p100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skills-item">
-                            <div class="left">
-                                OOP
-                            </div>
-                            <div class="right">
-                                <div class="progress-bar">
-                                    <div class="p90"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skills-item">
-                            <div class="left">
-                                PHP
-                            </div>
-                            <div class="right">
-                                <div class="progress-bar">
-                                    <div class="p80"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skills-item">
-                            <div class="left">
-                                REST
-                            </div>
-                            <div class="right">
-                                <div class="progress-bar">
-                                    <div class="p80"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skills-item">
-                            <div class="left">
                                 HTML
                             </div>
                             <div class="right">
@@ -801,11 +773,165 @@
                         </div>
                         <div class="skills-item">
                             <div class="left">
+                                Backbone.js
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p80"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-separator"></div>
+                        <div class="skills-item">
+                            <div class="left">
+                                .NET, C#
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <div class="left">
+                                PHP
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p80"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <div class="left">
+                                Node.js
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p70"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <div class="left">
+                                Java
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p70"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <div class="left">
+                                C
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p70"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-separator"></div>
+                        <div class="skills-item">
+                            <div class="left">
+                                JSON
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p90"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <div class="left">
+                                XML
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p80"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <div class="left">
+                                REST
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p70"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <div class="left">
+                                WS-SOAP
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p70"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-separator"></div>
+                        <div class="skills-item">
+                            <div class="left">
                                 SQL
                             </div>
                             <div class="right">
                                 <div class="progress-bar">
                                     <div class="p90"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <div class="left">
+                                SQL Server
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p80"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <div class="left">
+                                MySQL
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p70"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <div class="left">
+                                Oracle
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p70"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-separator"></div>
+                        <div class="skills-item">
+                            <div class="left">
+                                OOP
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p90"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <div class="left">
+                                Unit testing
+                            </div>
+                            <div class="right">
+                                <div class="progress-bar">
+                                    <div class="p80"></div>
                                 </div>
                             </div>
                         </div>
